@@ -38,7 +38,7 @@ set :aws_region, 'ap-northeast-1'
 set :aws_access_key_id, 'YOUR AWS KEY ID'
 set :aws_secret_access_key, 'YOUR AWS SECRET KEY'
 set :aws_autoscaling_group_name, 'YOUR NAME OF AUTO SCALING GROUP NAME'
-set :aws_launch_template_id, 'lt-03f39c5689155e374'
+set :aws_launch_template_id, 'Your AUTOSCALE GROUP Launch template ID'
 set :aws_autoscale_ami_prefix, 'server-name-'
 set :aws_keep_prev_no_of_ami, 1
 ```
