@@ -1,6 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/capistrano3-asg-ami.png)](http://badge.fury.io/rb/capistrano3-asg-ami)
 # capistrano3-asg-ami
-Capistrano 3 plugin for Updating Lanuch Template AMI with autoscale group first healthy instance.
+Capistrano 3 plugin for updating AWS [Launch Template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) with [autoscale group](https://aws.amazon.com/about-aws/whats-new/2018/01/introducing-aws-auto-scaling/) first healthy instance.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ require 'capistrano/autoscaling'
 
 ## Usage
 
-Set credentials with AmazonEC2FullAccess permission and in the capistrano deploy script / stage files add the following lines
+Create [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) with [AmazonEC2FullAccess](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_ec2_region.html) permission and Set credentials in the capistrano deploy script / stage files add the following lines
 
 ```ruby
 set :aws_region, 'ap-northeast-1'
@@ -57,19 +57,18 @@ And to update autoscale group launch template manually
 ```ruby
     cap [stage] autoscaling:update_ami
 ```
-
+i.e [stage] can be staging or production
 
 ## How this works
 
-1- Fetch only running instances that have an auto scaling group name you specified
-2- Create AMI with first healthy instance
-3- Tag AMI with autoscale group name
-4- Wait for AMI to be available for use
-5- Update Launch template with update AMI
-6- Deleting stale images base on (aws_keep_prev_no_of_ami) variable
+1. Fetch only running instances that have an auto scaling group name you specified
+2. Create AMI with first healthy instance
+3. Tag AMI with autoscale group name
+4. Wait for AMI to be available for use
+5. Update Launch template with update AMI
+6. Deleting stale images base on (aws_keep_prev_no_of_ami) variable
    if not set will only keep the latest one
    and delete the other AMI tagged with autoscale group name
-**
 
 
 ## Contributing

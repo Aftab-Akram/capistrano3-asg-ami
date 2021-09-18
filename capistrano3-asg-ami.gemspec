@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Aftab Akram']
   spec.email         = ['aftabakram04@gmail.com']
   spec.summary       = %q{Deploy to AWS Auto Scaling group.}
-  spec.description   = %q{Capistrano 3 plugin for Updating Lanuch Template AMI with autoscale group first healthy instance}
+  spec.description   = %q{Capistrano 3 plugin for updating AWS Launch Template AMI with autoscale group first healthy instance.}
   spec.homepage      = 'https://github.com/Aftab-Akram/capistrano3-asg-ami'
   spec.license       = 'MIT'
 
