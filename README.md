@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/capistrano3-asg-ami.png)](http://badge.fury.io/rb/capistrano3-asg-ami)
+[![Gem Downloads](http://img.shields.io/gem/dt/capistrano3-asg-ami.svg)](https://rubygems.org/gems/capistrano3-asg-ami) [![Gem Version](https://badge.fury.io/rb/capistrano3-asg-ami.png)](http://badge.fury.io/rb/capistrano3-asg-ami)
 # capistrano3-asg-ami
 Capistrano 3 plugin for updating AWS [Launch Template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) with [autoscale group](https://aws.amazon.com/about-aws/whats-new/2018/01/introducing-aws-auto-scaling/) first healthy instance.
 
