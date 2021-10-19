@@ -81,3 +81,8 @@ i.e [stage] can be staging or production
 
 To test while developoing just `bundle console` on the project root directory and execute
 `Capistrano::AutoScaling::VERSION` for a quick test
+
+
+<!-- CONTACT -->
+## Contact
+**Aftab Akram** - [LinkedIn](https://www.linkedin.com/in/aftabakram/) - aftabakram04@gmail.com
